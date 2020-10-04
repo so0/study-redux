@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import './exercise';
+import { createStore } from 'redux';
+import rootReducer from './modules';
+
+const store = createStore(rootReducer); // 스토어 생성
+console.log(store.getState()); // 스토어 상태를 확인
 
 ReactDOM.render(
   <React.StrictMode>
